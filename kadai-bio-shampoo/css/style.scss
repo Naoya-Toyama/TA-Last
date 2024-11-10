@@ -1,0 +1,2106 @@
+/*--------------------------------------------
+  変数、関数、@mixin設定
+--------------------------------------------*/
+@function vw($num) { /*width: 1366pxで px → vw 変換*/
+  $widthPc: 1366;
+  $vw1366: $num / $widthPc * 100vw;
+  @return round($vw1366 * 1000000) / 1000000; /*小数点以下 6桁まで*/
+}
+@function vw-sp($num) { /*width: 375pxで px → vw 変換*/
+  $widthSp : 375;
+  $vw375: $num / $widthSp * 100vw;
+  @return round($vw375 * 1000000) / 1000000; /*小数点以下 6桁まで*/
+}
+
+@mixin font-vw($font-size, $letter-spacing, $line-height, $color: #212529) {
+  font-size: vw($font-size);
+  letter-spacing: calc($letter-spacing / 1000) * 1em;
+  line-height: calc($line-height / $font-size);
+  color: $color;
+}
+@mixin font-vw-sp($font-size, $letter-spacing, $line-height, $color: #212529) {
+  font-size: vw-sp($font-size);
+  letter-spacing: calc($letter-spacing / 1000) * 1em;
+  line-height: calc($line-height / $font-size);
+  color: $color;
+}
+
+/*--------------------------------------------
+フォント設定
+--------------------------------------------*/
+@font-face {
+  font-family: "GenShinGothic-Bold";
+  src: url("../fonts/GenShinGothic-Bold.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GenShinGothic-Heavy";
+  src: url("../fonts/GenShinGothic-Heavy.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GenShinGothic-Medium";
+  src: url("../fonts/GenShinGothic-Medium.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HannariMincho-Regular";
+  src: url("../fonts/HannariMincho-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "NotoSansJP-Medium";
+  src: url("../fonts/NotoSansJP-Medium.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Philosopher-Italic";
+  src: url("../fonts/Philosopher-Italic.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Philosopher-Regular";
+  src: url("../fonts/Philosopher-Regular.woff");
+  font-weight: normal;
+}
+
+/*--------------------------------------------
+共通設定
+--------------------------------------------*/
+body {
+  color: #212529;
+}
+h1,h2,h3,
+h4,h5,h6 {
+  font-weight: normal;
+}
+img {
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: #212529;
+}
+li {
+  list-style: none;
+}
+.maker {
+  background: linear-gradient(transparent 81%, #b391a2 70%);
+}
+.border {
+  border-bottom: 1px solid #212529;
+}
+select {
+  width: 100%;
+  appearance: menulist;
+}
+
+/*--------------------------------------------
+#header .main
+--------------------------------------------*/
+/* フォント設定 */
+.main {
+  &__box {
+    &--title {
+      font-family: "HannariMincho-Regular";
+      @include font-vw(70, 50, 80, #63977e);
+    }
+    &--sub-title {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(28, -20, 36, );
+    }
+  }
+  &__box-flex {
+    &--title {
+      &-top-font {
+        font-family: "Philosopher-Regular","NotoSansJP-Medium";
+        @include font-vw(34, 20, 36, );
+      }
+      &-bottom-font {
+        font-family: "HannariMincho-Regular";
+        @include font-vw(45, -34, 80, );
+      }
+    }
+  }
+}
+
+/* サイズ・位置設定 */
+.main {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  padding: vw(52) 0 0 vw(705);
+  height: vw(910);
+
+  &__box {
+    &--sub-title {
+      &-position {
+        margin-top: vw(11);
+      }
+    }
+  }
+
+  &__box-flex {
+    &--img {
+      width: vw(408);
+      height: vw(371);
+
+      &-position {
+        margin: vw(45) 0 0 vw(94);
+      }
+    }
+    &--title {
+      &-top-position {
+        margin: vw(55) 0 0 vw(3);
+      }
+      &-bottom-position {
+        padding-bottom: vw(8);
+        margin-top: vw(-8);
+      }
+    }
+  }
+}
+/*--------------------------------------------
+#instagram .insta
+--------------------------------------------*/
+/* フォント設定 */
+.insta {
+  &__sub-title {
+    font-family: "NotoSansJP-Medium";
+    @include font-vw(34, 10, 36, );
+    white-space: nowrap;
+  }
+  &__inner-flex--title {
+    font-family: "NotoSansJP-Medium";
+    @include font-vw(16, 0, 27.2, );
+  }
+  &__flex-item {
+    &--text-inner {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(16, -70, 22, );
+    }
+    &--text-date {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(16, 0, 22, );
+      text-align: right;
+    }
+  }
+}
+
+/* サイズ・位置設定 */
+.insta {
+  height: vw(824);
+  padding: vw(36) vw(144) vw(58) vw(140);
+
+  &__title {
+    width: vw(958);
+    height: vw(119);
+    margin: 0 vw(63) 0;
+  }
+  &__sub-title {
+    &--position {
+      margin: vw(11) vw(198) 0;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    margin: vw(47) 0 0;
+    &-item {
+      width: vw(172);
+
+      &-position {
+        margin-right: vw(10);
+      }
+      &--border {
+        border: 1px solid #212529;
+      }
+      &--sample {
+        width: vw(171);
+        height: vw(171);
+      }
+
+      &--text {
+        padding: vw(13) vw(12) vw(56) vw(9);
+
+        &-date {
+          &-position {
+            margin-top: vw(15);
+          }
+        }
+      }
+    }
+  }
+
+  &__inner-flex {
+    display: flex;
+    padding: vw(9) 0 0 vw(9);
+  
+    &--icon {
+      width: vw(31);
+      height: vw(31);
+    }
+    &--title {
+      &-position {
+        margin-left: vw(3);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#campaign .cv
+--------------------------------------------*/
+/* フォント設定 */
+.cv {
+  &__flex {
+    &-left {
+      &--text {
+        font-family: "NotoSansJP-Medium";
+        @include font-vw(28, 0, 36, );
+      }
+    }
+    &-right {
+      &--title {
+        font-family: "HannariMincho-Regular";
+        @include font-vw(55, 0, 36, );
+      }
+      &--sub-title {
+        font-family: "NotoSansJP-Medium";
+        @include font-vw(28, 20, 36, );
+      }
+      &--inline {
+        &-text {
+          font-family: "Philosopher-Regular","NotoSansJP-Medium";
+          @include font-vw(27, 0, 36, );
+          text-decoration: line-through;
+        }
+        &-regular {
+          font-family: "NotoSansJP-Medium";
+          @include font-vw(30, 0, 36, );
+        }
+        &-price {
+          font-family: "Philosopher-Regular","NotoSansJP-Medium";
+          @include font-vw(108, 0, 68.17, #ff0000);
+        }
+        &-yen {
+          font-size: vw(52);
+          line-height: calc(68.17 / 52);
+        }
+        &-tax {
+          font-family: "NotoSansJP-Medium";
+          @include font-vw(27, 20, 36, );
+        }
+      }
+      &--button-text {
+        font-family: "HannariMincho-Regular";
+        @include font-vw(51, 100, 36, #ffffff);
+      }
+      &--cancel-text {
+        font-family: "NotoSansJP-Medium";
+        @include font-vw(41, 0, 36, #bc0000);
+      }
+      &--cancel-minimum {
+        font-family: "NotoSansJP-Medium";
+        @include font-vw(29, -20, 36, );
+      }
+    }
+  } 
+}
+
+/* サイズ・位置設定 */
+.cv {
+  background-image: url("../img/cv.jpg");
+  background-size: cover;
+  height: vw(818);
+  padding: vw(43) vw(135);
+
+  &__title {
+    width: vw(957);
+    height: vw(139);
+    margin: 0 vw(67);
+  }
+  &__flex {
+    display: flex;
+    margin-top: vw(67);
+
+    &-left {
+      &--img {
+        width: vw(408);
+        height: vw(406);
+      }
+      &--fadein {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: opacity 1s, visibility 1s, transform 1s;
+      }
+      &--text {
+        &-position {
+          margin: vw(5) 0 0 vw(54);
+        }
+      }
+    }
+
+    &-right {
+      width: 70%;
+      padding: 0 vw(49);
+      white-space: nowrap;
+
+      &--title-box {
+        padding-bottom: vw(26);
+      }
+      &--title {
+        &-position {
+          margin: vw(11) 0 0 vw(-7);
+        }
+      }
+      &--sub-title {
+        &-position {
+          margin: vw(17) 0 0 vw(4);
+        }
+      }
+      &--inline {
+        &-box {
+          display: flex;
+          margin-top: vw(38);
+
+          &-right {
+            margin: vw(4) 0 0 vw(25);
+          }
+        }
+        &-regular {
+          &-position {
+            margin-top: vw(7);
+          }
+        }
+        &-price {
+          display: inline-block;
+        }
+        &-tax {
+          display: inline-block;
+          
+          &-position {
+            margin-left: vw(-3);
+          }
+        }
+      }
+
+      &--button {
+        width: vw(635);
+        height: vw(102);
+        border-radius: vw(10);
+        background: linear-gradient(to top,#91b3a2, #afc8bb);
+        padding: vw(30) vw(158) vw(25) vw(148);
+        margin-top: vw(35);
+      }
+
+      &--cancel {
+        &-box {
+          margin: vw(27) 0 0 vw(1);
+          margin-top: vw(27);
+        }
+        &-text {
+          &-position {
+            display: inline-block;
+            padding-bottom: vw(11);
+          }
+        }
+        &-minimum {
+          &-position {
+            margin: vw(6) 0 0 vw(-1);
+          }
+        }
+      }
+    }
+  }
+}
+.cv__flex-left--fadein-01 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/*--------------------------------------------
+#empathy .check
+--------------------------------------------*/
+/* フォント設定 */
+.check {
+  &__title {
+    font-family: "HannariMincho-Regular";
+    @include font-vw(74, 70, 88.8, #63977e);
+    white-space: nowrap;
+  }
+  &__list-flex--text {
+    font-family: "NotoSansJP-Medium";
+    @include font-vw(28, 70, 87, );
+  }
+}
+
+/* サイズ・位置設定 */
+.check {
+  height: vw(820);
+  overflow: hidden;
+
+  &__wrapper {
+    background-image: url("../img/empathy.jpg");
+    background-size: cover;
+    background-position: vw(-11) vw(-55);
+    height: vw(1047);
+    padding: vw(36) vw(130) 0 vw(127);
+  }
+  &__title {
+    &--position {
+      padding-bottom: vw(14);
+      margin-left: vw(3);
+    }
+  }
+
+  &__list {
+    margin: vw(123) 0 0 vw(8);
+    
+    &-flex {
+      align-items: center;
+      display: flex;
+
+      &--img {
+        width: vw(28);
+        height: vw(26);
+        margin-top: vw(8);
+      }
+      &--text {
+        &-position {
+          margin-left: vw(21);
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#exhibit .cause
+--------------------------------------------*/
+/* フォント設定 */
+.cause {
+  &__top {
+    &-title {
+      font-family: "HannariMincho-Regular";
+      @include font-vw(48, 30, 72, #63977e);
+    }
+    &-flex {
+      &--text {
+        font-family: "NotoSansJP-Medium";
+        @include font-vw(27, 10, 38, );
+      }
+    }
+  }
+  &__bottom {
+    &-title {
+      font-family: "HannariMincho-Regular";
+      @include font-vw(48, 30, 72, #63977e);
+    }
+    &-flex {
+      &--text {
+        font-family: "NotoSansJP-Medium";
+        @include font-vw(27, 10, 38, );
+
+        &-letter {
+          letter-spacing: calc(50em / 1000);
+        }
+      }
+    }
+  }
+}
+
+/* サイズ・位置設定 */
+.cause {
+  height: vw(1109);
+  overflow: hidden;
+
+  &__top {
+    background-image: url("../img/exhibit1.jpg");
+    background-size: cover;
+    height: vw(555);
+    position: relative;
+    padding: vw(36) vw(140) 0 vw(135);
+
+    &-title--position {
+      display: inline-block;
+      margin-left: vw(-3);
+      padding-bottom: vw(2);
+    }
+    &-flex {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: vw(45);
+
+      &--img {
+        width: vw(408);
+        height: vw(272);
+      }
+      &--text {
+        width: 57%;
+
+        &-position {
+          margin-top: vw(39);
+        }
+      }
+
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: vw(491);
+    left: vw(510);
+
+    &--img {
+      width: vw(343);
+      height: vw(123);
+    }
+  }
+
+  &__bottom {
+    background-image: url("../img/exhibit2.jpg");
+    background-size: cover;
+    height: vw(555);
+    padding: vw(70) vw(138) 0 vw(135);
+
+    &-title--position {
+      display: inline-block;
+      margin-left: vw(-3);
+      padding-bottom: vw(3);
+    }
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+      margin-top: vw(46);
+
+      &--img {
+        width: vw(408);
+        height: vw(272);
+      }
+      &--text {
+        width: 56.3%;
+        margin-top: vw(2);
+
+        &-position {
+          margin-top: vw(37);
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#benefit .point
+--------------------------------------------*/
+/* フォント設定 */
+.point {
+  &__title {
+    font-family: "HannariMincho-Regular";
+    @include font-vw(68, 70, 80, #63977e);
+    text-align: center;
+  }
+  &__flex-title-box {
+    &--title {
+      font-family: "HannariMincho-Regular";
+      @include font-vw(48, 30, 72, );
+
+      &-letter {
+        letter-spacing: 0;
+      }
+    }
+    &--inner {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(27, 0, 40, );
+    }
+  }
+  &__flex-img-box {
+    &--text {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(24, 0, 40, );
+      text-align: center;
+    }
+  }
+  &__flex-re-title-box {
+    &--title {
+      font-family: "HannariMincho-Regular";
+      @include font-vw(48, 30, 72, );
+    }
+    &--inner {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(27, 0, 40, );
+    }
+  }
+  &__flex-re-img-box {
+    &--text {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(24, 0, 40, );
+      text-align: center;
+    }
+  }
+}
+
+/* サイズ・位置設定 */
+.point {
+  background-image: url("../img/benefit.jpg");
+  background-size: cover;
+  height: vw(1981);
+  padding: vw(80) vw(136) 0 vw(137);
+
+  &__title {
+    &--position {
+      margin-left: vw(-9);
+    }
+  }
+
+  &__flex-01--position {
+    margin-top: vw(71);
+  }
+  &__flex-03--position {
+    margin-top: vw(87);
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    &-title-box {
+      width: 53.8%;
+      margin-left: vw(-3);
+
+      &--border {
+        padding-bottom: vw(12);
+      }
+      &--title {
+        &-position {
+          padding-bottom: vw(8);
+        }
+      }
+      &--inner {
+        &-position {
+          margin-top: vw(12);
+        }
+      }
+    }
+    &-img-box {
+      &--img-01 {
+        width: vw(423);
+        height: vw(283);
+        margin: vw(9) vw(3) 0 0;
+      }
+      &--img-03 {
+        width: vw(423);
+        height: vw(282);
+        margin: vw(9) vw(3) 0 0;
+      }
+      &--text-position {
+        margin: vw(-2) 0 0 vw(-3);
+      }
+    }
+  }
+
+  &__flex-02--position {
+    margin-top: vw(86);
+  }
+  &__flex-04--position {
+    margin-top: vw(86);
+  }
+
+  &__flex-re {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &-title-box {
+      width: 53.8%;
+
+      &--border {
+        padding-bottom: vw(11);
+      }
+      &--title {
+        &-position {
+          display: inline-block;
+          padding-bottom: vw(3);
+          margin-left: vw(-3);
+        }
+      }
+      &--inner {
+        &-position {
+          margin: vw(12) 0 0 vw(-3);
+        }
+      }
+    }
+    &-img-box {
+      &--img-02 {
+        width: vw(424);
+        height: vw(283);
+        margin: vw(11) 0 0 vw(-2);
+      }
+      &--img-04 {
+        width: vw(423);
+        height: vw(282);
+        margin: vw(11) 0 0 vw(-2);
+      }
+      &--text-position {
+        margin: vw(-3) 0 0 vw(-2);
+      }
+      &--text-04 {
+        line-height: calc(36 / 24);
+        margin-top: vw(1);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#step .use
+--------------------------------------------*/
+/* フォント設定 */
+.use {
+  &__title {
+    font-family: "HannariMincho-Regular";
+    @include font-vw(68, 30, 80, #63977e);
+    text-align: center;
+  }
+  &__flex-text {
+    &--title {
+      font-family: "Philosopher-Italic";
+      @include font-vw(49, 10, 80, );
+      text-decoration: underline;
+    }
+    &--inner {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(27, 0, 40, );
+    }
+  }
+}
+
+/* サイズ・位置設定 */
+.use {
+  background-image: url("../img/use.jpg");
+  background-size: cover;
+  height: vw(1924);
+  padding: vw(71) vw(140) 0 vw(135);
+
+  &__title {
+    &-position {
+      margin-left: vw(-11);
+    }
+  }
+
+  &__step-01 {
+    margin-top: vw(73);
+  }
+  &__step-02 {
+    margin-top: vw(28);
+  }
+  &__step-03 {
+    margin-top: vw(28);
+  }
+  &__step-04 {
+    margin-top: vw(28);
+  }
+  &__step-05 {
+    margin-top: vw(29);
+  }
+  &__border {
+    border-bottom: 1px solid #808080;
+  }
+  &__flex {
+    display: flex;
+    padding-bottom: vw(30);
+
+    &--img {
+      width: vw(478);
+      height: vw(239);
+      margin-top: vw(22);
+        }
+
+    &-text {
+      height: vw(276);
+      padding-left: vw(70);
+      margin-left: vw(73);
+    
+      &--border-left {
+        border-left: 1px solid #808080;
+      }
+      &--title-position {
+        margin: vw(2) 0 0 vw(-1);
+      }
+      &--inner {
+        margin-top: vw(43);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#question .qa
+--------------------------------------------*/
+/* フォント設定 */
+.qa {
+  &__title {
+    font-family: "HannariMincho-Regular";
+    @include font-vw(68, 30, 80, #63977e);
+    text-align: center;
+  }
+  &__box-q-flex {
+    &--title {
+      font-family: "Philosopher-Regular";
+      @include font-vw(54, 30, 80, #5d8974);
+    }
+    &--text {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(27, 0, 40, );
+    }
+  }
+  &__box-a-flex {
+    &--title {
+      font-family: "Philosopher-Regular";
+      @include font-vw(54, 30, 80, #9d3e3e);
+    }
+    &--text {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw(27, 0, 40, );
+    }
+  }
+}
+
+/* サイズ・位置設定 */
+.qa {
+  background-image: url("../img/Q_A.jpg");
+  background-size: cover;
+  height: vw(2307);
+  padding: vw(88) vw(140) 0 vw(135);
+
+  &__title {
+    &--position {
+      margin-left: vw(-4);
+    }
+  }
+
+  &__box {
+    &--01 {
+      padding-bottom: vw(68);
+      margin-top: vw(103);
+    }
+    &--02 {
+      padding-bottom: vw(71);
+      margin-top: vw(30);
+    }
+    &--03 {
+      padding-bottom: vw(67);
+      margin-top: vw(40);
+    }
+    &--04 {
+      padding-bottom: vw(71);
+      margin-top: vw(49);
+    }
+    &--05 {
+      padding-bottom: vw(67);
+      margin-top: vw(40);
+    }
+    &--06 {
+      margin-top: vw(39);
+    }
+    &--border {
+      border-bottom: 1px solid #808080;
+    }
+    &-q-flex {
+      display: flex;
+      align-items: baseline;
+
+      &--title-position {
+        margin-left: vw(-1);
+      }
+      &--text-position {
+        margin-left: vw(16);
+      }
+    }
+    &-a-flex {
+      display: flex;
+      align-items: baseline;
+      margin-top: vw(29);
+
+      &--text-position {
+        margin-left: vw(17);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#form .inquiry
+--------------------------------------------*/
+/* フォント設定 */
+.error_text {
+  font-family: "GenShinGothic-Bold";
+  @include font-vw(27, 0, 40, #ff0000);
+  text-align: center;
+}
+.inquiry {
+  &__title {
+    &--font {
+    font-family: "GenShinGothic-Bold";
+    @include font-vw(40, 260, 40, );
+    font-weight: bold;
+    text-align: center;
+    }
+  }
+  &__box-inner-flex {
+    &--title {
+      font-family: "GenShinGothic-Bold";
+      @include font-vw(27, 0, 40, );
+    }
+    &--mandatory {
+      font-family: "GenShinGothic-Bold";
+      @include font-vw(27, 0, 40, #ffffff);
+      text-align: center;
+    }
+  }
+  &__box-input {
+    font-family: "GenShinGothic-Bold";
+    @include font-vw(27, 0, 40, #5a5a5a);
+  }
+  &__submit--button-font {
+    font-family: "GenShinGothic-Bold";
+    @include font-vw(56, 80, 40, #ffffff);
+  }
+}
+
+/* サイズ・位置設定 */
+.inquiry {
+  padding: vw(70) vw(140) vw(91) vw(136);
+
+  &__title {
+    background-color: #f1efed;
+    border-radius: vw(10);
+    padding: vw(14) 0 vw(14) 0;
+    text-align: center;
+
+    &--position {
+      margin-left: vw(16);
+    }
+  }
+
+  &__box {
+    padding: vw(70) vw(69) vw(91);
+    border: 1px solid #808080;
+    border-radius: vw(10);
+    margin-top: vw(113);
+
+    &--position {
+      margin-top: vw(48);
+    }
+    &--item-01 {
+      margin-top: vw(-1);
+    }
+    &--item-02 {
+      margin-top: vw(95);
+    }
+    &--item-03 {
+      margin-top: vw(98);
+    }
+    &--item-04 {
+      margin-top: vw(96);
+    }
+    &-flex {
+      display: flex;
+      align-items: center;
+    }
+    &-inner-flex {
+      display: flex;
+      align-items: center;
+
+      &--title-position {
+        width: vw(200);
+      }
+      &--mandatory-position {
+        width: vw(68);
+        height: vw(46);
+        background-color: #ff0000;
+        border-radius: vw(4);
+        padding-top: vw(3);
+        margin-left: vw(43);
+      }
+      &--any {
+        background-color: #808080;
+      }
+    }
+  }
+  &__box-input {
+    width: vw(315);
+    height: vw(61);
+    border: 1px solid #d3d3d3;
+    border-radius: vw(4);
+    padding-left: vw(10);
+
+    &--position {
+      margin-left: vw(20);
+    }
+    &--long {
+      width: vw(620);
+    }
+  }
+
+  &__pay {
+    margin-top: vw(88);
+
+    &-title--position {
+      margin-left: vw(12);
+    }
+    &-box {
+      margin-top: vw(88);
+      padding: 0 vw(38);
+
+      &--radio-position {
+          width: vw(28);
+          height: vw(28);
+          vertical-align: middle;
+      }
+      &--text-position {
+        margin-left: vw(6);
+        vertical-align: middle;
+      }
+      &--bank {
+        margin-top: vw(48);
+      }
+      &--delivery {
+        margin-top: vw(46);
+      }
+    }
+  }
+
+  &__submit {
+    &--button {
+      width: vw(546);
+      height: vw(113);
+      background: linear-gradient(to top,#31a169, #91b3a2);
+      border-radius: vw(10);
+      padding: vw(9) vw(2) 0 0;
+
+      &-triangle {
+        margin-left: vw(4);
+      }
+      &-position {
+        margin: vw(101) vw(272) 0;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------
+#footer .last
+--------------------------------------------*/
+/* フォント設定 */
+.last {
+  &__item--font {
+    font-family: "NotoSansJP-Medium";
+    @include font-vw(20, 0, 20, )
+  }
+}
+
+/* サイズ・位置設定 */
+.last {
+  background-image: url("../img/footer.jpg");
+  background-size: cover;
+  height: vw(71);
+  padding: vw(27) vw(207) vw(23) vw(204);
+
+  &__flex {
+    display: flex;
+    justify-content: center;
+
+    &--inner {
+      display: flex;
+    }
+    &--inner-bottom {
+      display: flex;
+    }
+  }
+  &__item {
+    &--border-right {
+      border-right: 1px solid;
+    }
+    &--text {
+      padding: 0 vw(10) 0 vw(9);
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+/*--------------------------------------------
+#header .main  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .main {
+    &__box {
+      &--title {
+        @include font-vw-sp(31.18, 60, 37.41, #63977e);
+      }
+      &--sub-title {
+        @include font-vw-sp(14.4, -10, 17.28, #ffffff);
+      }
+    }
+    &__box-flex {
+      &--title {
+        &-top-font {
+          @include font-vw-sp(14.4, 20, 17.28, #ffffff);
+
+          &-sp {
+            font-family: "NotoSansJP-Medium";
+            @include font-vw-sp(14, 25, 17, #ffffff);
+          }
+        }
+        &-bottom-font {
+          @include font-vw-sp(18.36, -12, 14.688, #ffffff);
+
+          &-sp {
+            letter-spacing: -0.08em;
+          }
+        }
+      }
+    }
+  }
+
+/* サイズ・位置設定 */ 
+  .main {
+    background-image: url("../img/header_sp.jpg");
+    padding: vw-sp(14) 0 0 vw-sp(44);
+    height: vw-sp(540);
+
+    &__box {
+      &--title {
+        &-position {
+          margin-left: vw-sp(14);
+        }
+      }
+      &--sub-title {
+        &-position {
+          margin: vw-sp(4) 0 0 vw-sp(12);
+        }
+      }
+    }
+
+    &__box-flex {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-top: vw-sp(272);
+
+      &--img {
+        width: vw-sp(150);
+        height: vw-sp(136);
+
+        &-position {
+          margin: 0 0 0 vw-sp(-9);
+        }
+      }
+      &--title {
+        width: 45%;
+        margin-top: vw-sp(59);
+
+        &-top-position {
+          margin: vw-sp(0) 0 0 vw-sp(0);
+        }
+        &-bottom-position {
+          padding-bottom: vw-sp(0);
+          margin-top: vw-sp(0);
+        }
+      }
+    }
+  }
+
+/*--------------------------------------------
+#instagram .insta  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .insta {
+    &__sub-title {
+      @include font-vw-sp(12.6, 10, 18.9, );
+    }
+    &__inner-flex--title {
+      @include font-vw-sp(10, 0, 12, );
+    }
+    &__flex-item {
+      &--text-inner {
+        @include font-vw-sp(9, -70, 12, );
+      }
+      &--text-date {
+        @include font-vw-sp(10, 0, 15, );
+      }
+    }
+  }
+
+/* サイズ・位置設定 */ 
+  .insta {
+    height: vw-sp(433);
+    padding: vw-sp(22) vw-sp(50) vw-sp(47);
+
+    &__title {
+      width: vw-sp(269);
+      height: vw-sp(32);
+      margin: 0 vw-sp(6) 0;
+    }
+    &__sub-title {
+      &--position {
+        margin: vw-sp(2) vw-sp(15) 0;
+      }
+    }
+
+    &__flex {
+      width: vw-sp(275);
+      margin: vw-sp(13) 0;
+      overflow-x: scroll;
+
+      &-item {
+        width: vw-sp(85);
+        flex-shrink: 0;
+
+        &-position {
+          margin-right: vw-sp(10);
+        }
+        &--sample {
+          width: vw-sp(84);
+          height: vw-sp(84);
+        }
+
+        &--text {
+          padding: vw-sp(11) vw-sp(5) vw-sp(5) vw-sp(3);
+
+          &-date {
+            &-position {
+              margin-top: vw-sp(13);
+            }
+          }
+        }
+      }
+    }
+
+    &__inner-flex {
+      padding: vw-sp(6) 0 0 vw-sp(4);
+    
+      &--icon {
+        width: vw-sp(15);
+        height: vw-sp(15);
+      }
+      &--title {
+        &-position {
+          margin-left: vw-sp(6);
+        }
+      }
+    }
+  }
+/*--------------------------------------------
+#campaign .cv @media
+--------------------------------------------*/
+/* フォント設定 */
+  .cv{
+    &__flex {
+      &-left {
+        &--text {
+          @include font-vw-sp(10.8, 0, 16.2, );
+        }
+      }
+      &-right {
+        &--title {
+          @include font-vw-sp(14.4, 0, 17.3, );
+        }
+        &--sub-title {
+          @include font-vw-sp(10, 20, 12, );
+        }
+        &--inline {
+          &-text {
+            @include font-vw-sp(12.6, 0, 18.9, );
+          }
+          &-regular {
+            @include font-vw-sp(14.04, 0, 21.06, );
+          }
+          &-price {
+            @include font-vw-sp(54, 0, 81, #ff0000);
+          }
+          &-yen {
+            font-size: vw-sp(25.2);
+            line-height: calc(37.8 / 25.2);
+          }
+          &-tax {
+            @include font-vw-sp(10, 20, 15, );
+          }
+        }
+        &--button-text {
+          @include font-vw-sp(16.2, 600, 24.3, #ffffff);
+        }
+        &--cancel-text {
+          @include font-vw-sp(13.32, 0, 15.984, #bc0000);
+        }
+        &--cancel-minimum {
+          @include font-vw-sp(10, 0, 15, );
+        }
+      }
+    } 
+  }
+
+  /* サイズ・位置設定 */
+  .cv {
+      background-image: url("../img/cv_sp.jpg");
+      height: vw-sp(288);
+      padding: vw-sp(6) vw-sp(29) vw-sp(25) vw-sp(43);
+
+      &__title {
+        width: vw-sp(254);
+        height: vw-sp(37);
+        margin: 0 vw-sp(33)  0 vw-sp(17);
+      }
+      &__flex {
+        position: relative;
+        margin-top: vw-sp(13);
+
+        &-left {
+          &--img {
+            width: vw-sp(110);
+            height: vw-sp(111);
+          }
+          &--text {
+            &-position {
+              position: absolute;
+              top: vw-sp(42);
+              left: vw-sp(134);
+              margin: 0;
+            }
+          }
+        }
+
+        &-right {
+          width: 70%;
+          padding: 0 vw-sp(2) 0 vw-sp(23);
+          margin-left: vw-sp(2);
+
+          &--title-box {
+            padding-bottom: vw-sp(5.5);
+          }
+          &--title {
+            &-position {
+              margin: vw-sp(-1.5) 0 0 vw-sp(-4);
+            }
+          }
+          &--sub-title {            
+            &-position {
+              margin: vw-sp(-3) 0 0 0;
+            }
+          }
+          &--inline {
+            &-box {
+              position: absolute;
+              top: vw-sp(120);
+              left: vw-sp(2);
+              margin-top: 0;
+
+              &-right {
+                margin: vw-sp(-21.5) 0 0 vw-sp(15.5);
+              }
+            }
+            &-regular {       
+              &-position {
+                margin-top: vw-sp(-0.5);
+              }
+            }
+            &-tax {
+              &-position {
+                position: absolute;
+                top: 27px;
+                margin: 0;
+              }
+            }
+          }
+
+          &--button {
+            position: absolute;
+            top: vw-sp(170.5);
+            left: 0;
+            width: vw-sp(288);
+            height: vw-sp(36);
+            border-radius: vw-sp(10);
+            padding: vw-sp(3) vw-sp(65) vw-sp(5) vw-sp(75);
+            margin: 0;
+          }
+
+          &--cancel {
+            &-box {
+              position: absolute;
+              top: vw-sp(65.5);
+              left: vw-sp(133.5);
+              margin: 0;
+            }
+            &-text {
+              &-position {
+                padding-bottom: 0;
+              }
+            }
+            &-minimum {
+              &-position {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+/*--------------------------------------------
+#empathy .check  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .check {
+    &__title {
+      @include font-vw-sp(19.8, 70, 23.7, #63977e);
+    }
+    &__list-flex--text {
+      @include font-vw-sp(12.6, 70, 35.028, );
+    }
+  }
+
+/* サイズ・位置設定 */
+  .check {
+    height: vw-sp(300.01);
+
+    &__wrapper {
+      background-image: url("../img/empathy_sp.jpg");
+      background-position: center;
+      height: vw-sp(307);
+      padding: vw-sp(10) vw-sp(45) 0 vw-sp(40);
+    }
+    &__title {
+      &--position {
+        padding-bottom: 0;
+        margin-left: 0;
+      }
+    }
+
+    &__list {
+      margin: vw-sp(28) 0 0 vw-sp(4);
+      
+      &-flex {
+        &--img {
+          width: vw-sp(13);
+          height: vw-sp(12);
+          margin-top: vw-sp(2);
+        }
+        &--text {
+          &-position {
+            margin-left: vw-sp(5);
+          }
+        }
+      }
+    }
+  }
+
+/*--------------------------------------------
+#exhibit .cause  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .cause {
+    &__top {
+      &-title {
+        @include font-vw-sp(15.84, 30, 3.168, #63977e);
+        white-space: nowrap;
+      }
+      &-flex {
+        &--text {
+          @include font-vw-sp(12.6, 10, 18.9, );
+        }
+      }
+    }
+    &__bottom {
+      &-title {
+        @include font-vw-sp(15.8, 30, 12.64, #63977e);
+        white-space: nowrap;
+      }
+      &-flex {
+        &--text {
+          @include font-vw-sp(12.6, 10, 18.9, );
+
+          &-letter {
+            letter-spacing: calc(10em / 1000);
+          }
+        }
+      }
+    }
+  }
+
+/* サイズ・位置設定 */
+  .cause {
+    height: vw-sp(781.5);
+
+    &__top {
+      background-image: url("../img/exhibit1_sp.jpg");
+      height: vw-sp(384);
+      padding: vw-sp(21) vw-sp(44) 0 vw-sp(40);
+
+      &-title--position {
+        margin-left: vw-sp(-1);
+        padding-bottom: vw-sp(8);
+      }
+      &-flex {
+        flex-direction: column;
+        margin-top: vw-sp(20.5);
+
+        &--img {
+          width: vw-sp(288);
+          height: vw-sp(192);
+        }
+        &--text {
+          width: 100%;
+          margin-top: vw-sp(6);
+
+          &-position {
+            margin-top: vw-sp(3);
+          }
+        }
+
+      }
+    }
+
+    &__arrow {
+      top: vw-sp(371.5);
+      left: vw-sp(126.8);
+
+      &--img {
+        width: vw-sp(115);
+        height: vw-sp(40);
+      }
+    }
+
+    &__bottom {
+      background-image: url("../img/exhibit2_sp.jpg");
+      height: vw-sp(398.5);
+      padding: vw-sp(32) vw-sp(44) 0 vw-sp(43);
+
+      &-title--position {
+        margin-left: vw-sp(23);
+        padding-bottom: vw-sp(3);
+      }
+      &-flex {
+        flex-direction: column;
+        margin-top: vw-sp(23);
+
+        &--img {
+          width: vw-sp(288);
+          height: vw-sp(192);
+        }
+        &--text {
+          width: 100%;
+          margin: vw-sp(3) 0 0 vw-sp(2);
+
+          &-position {
+            margin-top: vw-sp(19);
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------------------
+#benefit .point  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .point {
+    &__title {
+      @include font-vw-sp(18, 70, 21.6, #63977e);
+    }
+    &__flex-title-box {
+      &--title {
+        @include font-vw-sp(15.84, 30, 19, );
+
+        &-letter {
+          letter-spacing: 0;
+        }
+      }
+      &--inner {
+        @include font-vw-sp(12.6, 0, 18.9, );
+      }
+    }
+    &__flex-img-box {
+      &--text {
+        @include font-vw-sp(10.8, 0, 16.2, );
+      }
+    }
+    &__flex-re-title-box {
+      &--title {
+        @include font-vw-sp(15.84, 30, 19, );
+      }
+      &--inner {
+        @include font-vw-sp(12.6, 0, 18.9, );
+      }
+    }
+    &__flex-re-img-box {
+      &--text {
+        @include font-vw-sp(10.8, 0, 16.2, );
+      }
+    }
+  }
+
+/* サイズ・位置設定 */
+  .point {
+    background-image: url("../img/benefit_sp.jpg");
+    height: vw-sp(1508);
+    padding: vw-sp(7) vw-sp(44) 0 vw-sp(43);
+
+    &__title {
+      &--position {
+        margin-left: vw-sp(-7);
+      }
+    }
+
+    &__flex-01--position {
+      margin-top: vw-sp(30);
+    }
+    &__flex-03--position {
+      margin-top: vw-sp(31);
+    }
+
+    &__flex {
+      flex-direction: column;
+
+      &-title-box {
+        width: 100%;
+        margin-left: vw-sp(0);
+
+        &--border {
+          padding-bottom: vw-sp(9);
+        }
+        &--title {
+          &-position {
+            padding-bottom: vw-sp(1);
+            margin-left: vw-sp(-1);
+          }
+        }
+        &--inner {
+          &-position {
+            margin-top: vw-sp(2);
+          }
+        }
+      }
+      &-img-box {
+        &--img-01 {
+          width: vw-sp(288);
+          height: vw-sp(192);
+          margin: vw-sp(13) vw-sp(0) 0 0;
+        }
+        &--img-03 {
+          width: vw-sp(288);
+          height: vw-sp(192);
+          margin: vw-sp(14) vw-sp(0) 0 0;
+        }
+        &--text-position {
+          margin: vw-sp(5) 0 0 vw-sp(2);
+        }
+      }
+    }
+
+    &__flex-02--position {
+      margin-top: vw-sp(30);
+    }
+    &__flex-04--position {
+      margin-top: vw-sp(31);
+    }
+
+    &__flex-re {
+      flex-direction: column;
+
+      &-title-box {
+        width: 100%;
+
+        &--border {
+          padding-bottom: vw-sp(9);
+        }
+        &--title {
+          &-position {
+            display: inline-block;
+            padding-bottom: vw-sp(1);
+            margin-left: vw-sp(0);
+          }
+        }
+        &--inner {
+          &-position {
+            margin: vw-sp(3) 0 0 vw-sp(0);
+          }
+        }
+      }
+      &-img-box {
+        &--img-02 {
+          width: vw-sp(288);
+          height: vw-sp(192);
+          margin: vw-sp(12) 0 0 vw-sp(0);
+        }
+        &--img-04 {
+          width: vw-sp(288);
+          height: vw-sp(192);
+          margin: vw-sp(12) 0 0 vw-sp(0);
+        }
+        &--text-position {
+          margin: vw-sp(5) 0 0 vw-sp(1);
+        }
+        &--text-04 {
+          line-height: calc(16.2 / 10.8);
+          margin-top: vw-sp(4);
+        }
+        &--br{
+          display: none;
+        }
+      }
+    }
+  }
+
+/*--------------------------------------------
+#step .use  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .use {
+    &__title {
+      @include font-vw-sp(18, 30, 21.6, #63977e);
+    }
+    &__flex-text {
+      &--title {
+        @include font-vw-sp(15.84, 10, 19, );
+      }
+      &--inner {
+        @include font-vw-sp(12.6, 0, 18.9, );
+      }
+    }
+  }
+
+/* サイズ・位置設定 */
+  .use {
+    background-image: url("../img/use_sp.jpg");
+    height: vw-sp(1333);
+    padding: vw-sp(7) vw-sp(44) 0 vw-sp(43);
+
+    &__title {
+      &-position {
+        margin-left: vw-sp(-4);
+      }
+    }
+
+    &__step-01 {
+      margin-top: vw-sp(20);
+    }
+    &__step-02 {
+      margin-top: vw-sp(25.5);
+    }
+    &__step-03 {
+      margin-top: vw-sp(25.5);
+    }
+    &__step-04 {
+      margin-top: vw-sp(24);
+    }
+    &__step-05 {
+      margin-top: vw-sp(26);
+    }
+    &__flex {
+      position: relative;
+      flex-direction: column;
+      padding-bottom: vw-sp(16.5);
+
+      &--img {
+        width: vw-sp(288);
+        height: vw-sp(144);
+        margin-top: vw-sp(36);
+          }
+
+      &-text {
+        height: 100%;
+        padding: 0;
+        margin: vw-sp(4) 0 0 0;
+      
+        &--border-left {
+          border-left: none;
+        }
+        &--title-position {
+          position: absolute;
+          top: vw-sp(0);
+          left: vw-sp(0);
+          margin: vw-sp(0) 0 0 vw(0);
+        }
+        &--inner {
+          margin-top: vw-sp(0);
+        }
+      }
+    }
+  }
+
+/*--------------------------------------------
+#question .qa  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .qa {
+    &__title {
+      @include font-vw-sp(18, 30, 21.6, #63977e);
+    }
+    &__box-q-flex {
+      &--title {
+        @include font-vw-sp(21.6, 30, 32.4, #5d8974);
+      }
+      &--text {
+        @include font-vw-sp(12.6, 0, 18.9, );
+      }
+    }
+    &__box-a-flex {
+      &--title {
+        @include font-vw-sp(21.6, 30, 32.4, #9d3e3e);
+      }
+      &--text {
+        @include font-vw-sp(12.6, 0, 18.9, );
+      }
+    }
+  }
+
+/* サイズ・位置設定 */
+  .qa {
+    background-image: url("../img/Q_A_sp.jpg");
+    height: vw-sp(978);
+    padding: vw-sp(9) vw-sp(44) 0 vw-sp(43);
+
+    &__title {
+      &--position {
+        margin-left: vw-sp(-4);
+      }
+    }
+
+    &__box {
+      &--01 {
+        padding-bottom: vw-sp(19);
+        margin-top: vw-sp(19);
+      }
+      &--02 {
+        padding-bottom: vw-sp(19);
+        margin-top: vw-sp(10);
+      }
+      &--03 {
+        padding-bottom: vw-sp(19);
+        margin-top: vw-sp(10);
+      }
+      &--04 {
+        padding-bottom: vw-sp(18);
+        margin-top: vw-sp(9);
+      }
+      &--05 {
+        padding-bottom: vw-sp(19);
+        margin-top: vw-sp(10);
+      }
+      &--06 {
+        margin-top: vw-sp(11);
+      }
+      &-q-flex {
+
+        &--title-position {
+          margin-left: vw-sp(0);
+        }
+        &--text-position {
+          margin-left: vw-sp(3);
+        }
+      }
+      &-a-flex {
+        margin-top: vw-sp(0);
+
+        &--04-sp {
+          margin-top: vw-sp(6);
+        }
+        &--text-position {
+          margin-left: vw-sp(5);
+        }
+      }
+    }
+  }
+
+/*--------------------------------------------
+#form .inquiry  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .error_text {
+    @include font-vw-sp(12.6, 0, 18.9, #ff0000);
+    text-align: left
+  }
+  .inquiry {
+    &__title {
+      &--font {
+      @include font-vw-sp(16.2, 260, 19.44, );
+      }
+    }
+    &__box-inner-flex {
+      &--title {
+        @include font-vw-sp(12.6, 0, 18.9, );
+      }
+      &--mandatory {
+        @include font-vw-sp(10.8, 0, 16.2, #ffffff);
+      }
+    }
+    &__box-input {
+      @include font-vw-sp(12.6, 0, 18.9, #5a5a5a);
+    }
+    &__submit--button-font {
+      font-family: "GenShinGothic-Bold";
+      @include font-vw-sp(16.2, 80, 19.4, #ffffff);
+    }
+  }
+
+/* サイズ・位置設定 */
+  .inquiry {
+    padding: vw-sp(19) vw-sp(44) vw-sp(30) vw-sp(43);
+
+    &__title {
+      border-radius: vw-sp(9.5);
+      padding: vw-sp(3) 0 vw-sp(3) 0;
+
+      &--position {
+        margin-left: vw-sp(5);
+      }
+    }
+
+    &__box {
+      padding: vw-sp(15) vw-sp(19) vw-sp(28) vw-sp(17);
+      border-radius: vw-sp(10);
+      margin-top: vw-sp(34);
+
+      &--position {
+        margin-top: vw-sp(11);
+      }
+
+      &--municipalities {
+        margin-top: vw-sp(15);
+      }
+      &--condominium {
+        margin-top: vw-sp(15);
+      }
+      &--mail {
+        margin-top: vw-sp(15);
+      }
+
+      &--item-01 {
+        margin-top: vw-sp(-1);
+      }
+      &--item-02 {
+        margin-top: vw-sp(37);
+      }
+      &--item-03 {
+        margin-top: vw-sp(37);
+      }
+      &--item-04 {
+        margin-top: vw-sp(37);
+      }
+      &-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-inner-flex {
+        
+        &--title-position {
+          width: 100%;
+        }
+        &--mandatory-position {
+          width: vw-sp(35);
+          height: vw-sp(17);
+          border-radius: vw-sp(4);
+          padding-top: vw-sp(1);
+          margin: vw-sp(-1) 0 0 vw-sp(-7);
+          
+        }
+      }
+    }
+    &__box-input {
+      width: vw-sp(250);
+      height: vw-sp(23.4);
+      border: 1px solid #d3d3d3;
+      border-radius: vw-sp(4);
+      padding-left: vw-sp(3);
+
+      &--position {
+        margin: vw-sp(1) 0 0 0;
+      }
+      &--long {
+        width: vw-sp(250);
+      }
+    }
+
+    &__pay {
+      margin-top: vw-sp(44);
+
+      &-title--position {
+        margin-left: vw-sp(3);
+      }
+      &-box {
+        margin-top: vw-sp(32);
+        padding: 0 vw-sp(40);
+
+        &--radio-position {
+            width: vw-sp(14);
+            height: vw-sp(14);
+        }
+        &--text-position {
+          margin-left: vw-sp(2);
+        }
+        &--bank {
+          margin-top: vw-sp(17);
+        }
+        &--delivery {
+          margin-top: vw-sp(16);
+        }
+      }
+    }
+
+    &__submit {
+      &--button {
+        width: vw-sp(144);
+        height: vw-sp(30);
+        border-radius: vw-sp(10);
+        padding: vw-sp(1) vw-sp(20) 0 vw-sp(29);
+
+        &-triangle {
+          margin-left: vw-sp(5);
+        }
+        &-position {
+          margin: vw-sp(37) vw-sp(72) 0;
+        }
+      }
+    }
+  }
+
+  /*--------------------------------------------
+#footer .last  @media
+--------------------------------------------*/
+/* フォント設定 */
+  .last {
+    &__item--font {
+      font-family: "NotoSansJP-Medium";
+      @include font-vw-sp(10.8, 0, 10.8, )
+    }
+  }
+
+/* サイズ・位置設定 */
+  .last {
+    height: vw-sp(37);
+    padding: vw-sp(5) vw-sp(34) vw-sp(5) vw-sp(33);
+
+    &__flex {
+      flex-direction: column;
+
+      &--inner {
+        &-bottom {
+          justify-content: center;
+        
+          &-position {
+            margin: vw-sp(4) 0 0 vw-sp(5);
+          }
+        }
+      }
+    }
+    &__item {
+      &--text {
+        padding: 0 vw-sp(5) 0 vw-sp(5);
+      }
+    }
+  }
+}
