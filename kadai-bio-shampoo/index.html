@@ -2,1045 +2,373 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <!-- タイトル -->  
-  <title>プレミアムbioシャンプー</title>
-  <meta name="description" content="100%天然成分で見た目-10歳!?のうるツヤ髪へ白髪染めで傷んだ髪が変わる「プレミアムbioシャンプー」instagramでも大人気のプレミアムオーガニックシャンプー">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- css -->  
-  <link rel="stylesheet" href="css/ress.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 電話番号識別阻害コントロール -->
+  <meta name="format-detection" content="telephone=no">
+  <title>サンプル工業株式会社</title>
+
+  <!-- OGP設定 -->
+  <meta property="og:url" content="https://naoya-works.com/hanabi/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="サンプル工業株式会社">
+  <meta property="og:description" content="ポートフォリオ用のサンプルです">
+  <meta property="og:site_name" content="サンプル工業株式会社">
+  <meta property="og:image" content="https://naoya-works.com/hanabi/icon/hanabi_sample.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon/favicon32.ico">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&family=Poppins:wght@700&family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/8e4557c76f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- ress.min -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <!-- Start WOWSlider.com HEAD section -->
+  <link rel="stylesheet" type="text/css" href="./engine1/style.css" />
+  <script type="text/javascript" src="./engine1/jquery.js"></script>
+  <!-- End WOWSlider.com HEAD section -->
+  <!-- style.css -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <!-- header -->
-  <header id="header" class="main">
-    <div class="main__box">
-      <h1 class="main__box--title main__box--title-position">
-        白髪染めで傷んだ<br>髪が変わる。
-      </h1>
-      <p class="main__box--sub-title main__box--sub-title-position">
-        プレミアムオーガニックシャンプー
-      </p>
+  <header class="header">
+    <div class="container">
 
-      <div class="main__box-flex">
-        <img src="img/sample.png" alt="" class="main__box-flex--img main__box-flex--img-position">
-
-        <div class="main__box-flex--title">
-          <p class="main__box-flex--title-top-position"><span class="main__box-flex--title-top-font maker">100%<span class="main__box-flex--title-top-font-sp">天然成分</span></span><span class="main__box-flex--title-top-font">で</span></p>
-          <p class="main__box-flex--title-bottom-position"><span class="main__box-flex--title-bottom-font main__box-flex--title-bottom-position maker">見た目-10歳!?の</span><span class="main__box-flex--title-bottom-font main__box-flex--title-bottom-font-sp main__box-flex--title-bottom-position maker">うるツヤ髪へ</span></p>
-        </div>
+      <!-- ハンバーガーボタン（768px以上で非表示） -->
+      <div class="hamburger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <b class="noto-sans-jp">メニュー</b>
       </div>
+
+      <!-- 768px以上で非表示 -->
+      <h2 class="header-title-sp">魂</h2>
+  
+      <nav class="header-nav hamburger-nav">
+        <ul>
+          <li><a href="#">
+            <i class="bi bi-circle-fill"></i>
+            <span>サンプル工業の歴史</span>
+          </a></li>
+  
+          <li><a href="#">
+            <i class="bi bi-circle-fill"></i>
+            <span>花火ができるまで</span>
+          </a></li>
+  
+          <li><a href="#">
+            <i class="bi bi-circle-fill"></i>
+            <span>ギャラリー</span>
+          </a></li>
+        </ul>
+
+        <!-- ヘッダーロゴ(768px未満は非表示) -->
+        <h2 class="header-title-pc">魂</h2>
+
+        <ul>
+          <li><a href="#">
+            <i class="bi bi-circle-fill"></i>
+            <span>会社概要</span>
+          </a></li>
+  
+          <li><a href="#">
+            <i class="bi bi-circle-fill"></i>
+            <span>採用情報</span>
+          </a></li>
+  
+          <li><a href="#">
+            <i class="bi bi-circle-fill"></i>
+            <span>お問い合わせ</span>
+          </a></li>
+        </ul>
+      </nav>
     </div>
-  </header><!-- /#header.main -->
+  </header><!-- /.header -->
 
   <main>
-    <!-- Instagram -->
-    <section id="instagram" class="insta">
-      <img src="img/Instagramtitle.png" alt="" class="insta__title">
-      <h2 class="insta__sub-title insta__sub-title--position">
-        多くのお客様にご愛用いただいております！
-      </h2>
+    <div class="cover">
 
-      <ul class="insta__flex">
+      <!-- Start WOWSlider.com BODY section -->
+      <div id="wowslider-container1">
+        <div class="ws_images cover-slide">
+          <ul>
 
-        <!-- insta-item_01 -->
-        <li class="insta__flex-item insta__flex-item-position insta__flex-item--border">
-          <img src="img/Instagram_sample.jpg" alt="" class="insta__flex-item--sample">
+            <!-- スライド-01 -->
+            <li>
+              <img src="data1/images/slide01.jpg" alt="slide01" title="slide01" id="wows1_0"/>
+            </li>
 
-          <div class="insta__inner-flex">
-            <img src="img/Instagram_icon.png" alt="" class="insta__inner-flex--icon">
-            <p class="insta__inner-flex--title insta__inner-flex--title-position">sample</p>
-          </div>
+            <!-- スライド-02 -->
+            <li>
+              <a tabindex="-1">
+                <img src="data1/images/slide02.jpg" alt="wow slider" title="slide02" id="wows1_1"/>
+              </a>
+            </li>
 
-          <div class="insta__flex-item--text">
-            <p class="insta__flex-item--text-inner">
-              サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-            </p>
-            <p class="insta__flex-item--text-date insta__flex-item--text-date-position">
-              20XX/XX/XX
-            </p>  
-          </div>
-        </li>
-
-        <!-- insta-item_02 -->
-        <li class="insta__flex-item insta__flex-item-position insta__flex-item--border">
-          <img src="img/Instagram_sample.jpg" alt="" class="insta__flex-item--sample">
-
-          <div class="insta__inner-flex">
-            <img src="img/Instagram_icon.png" alt="" class="insta__inner-flex--icon">
-            <p class="insta__inner-flex--title insta__inner-flex--title-position">sample</p>
-          </div>
-
-          <div class="insta__flex-item--text">
-            <p class="insta__flex-item--text-inner">
-              サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-            </p>
-            <p class="insta__flex-item--text-date insta__flex-item--text-date-position">
-              20XX/XX/XX
-            </p>  
-          </div>
-        </li>
-
-        <!-- insta-item_03 -->
-        <li class="insta__flex-item insta__flex-item-position insta__flex-item--border">
-          <img src="img/Instagram_sample.jpg" alt="" class="insta__flex-item--sample">
-
-          <div class="insta__inner-flex">
-            <img src="img/Instagram_icon.png" alt="" class="insta__inner-flex--icon">
-            <p class="insta__inner-flex--title insta__inner-flex--title-position">sample</p>
-          </div>
-
-          <div class="insta__flex-item--text">
-            <p class="insta__flex-item--text-inner">
-              サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-            </p>
-            <p class="insta__flex-item--text-date insta__flex-item--text-date-position">
-              20XX/XX/XX
-            </p>  
-          </div>
-        </li>
-
-        <!-- insta-item_04 -->
-        <li class="insta__flex-item insta__flex-item-position insta__flex-item--border">
-          <img src="img/Instagram_sample.jpg" alt="" class="insta__flex-item--sample">
-
-          <div class="insta__inner-flex">
-            <img src="img/Instagram_icon.png" alt="" class="insta__inner-flex--icon">
-            <p class="insta__inner-flex--title insta__inner-flex--title-position">sample</p>
-          </div>
-
-          <div class="insta__flex-item--text">
-            <p class="insta__flex-item--text-inner">
-              サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-            </p>
-            <p class="insta__flex-item--text-date insta__flex-item--text-date-position">
-              20XX/XX/XX
-            </p>  
-          </div>
-        </li>
-
-        <!-- insta-item_05 -->
-        <li class="insta__flex-item insta__flex-item-position insta__flex-item--border">
-          <img src="img/Instagram_sample.jpg" alt="" class="insta__flex-item--sample">
-
-          <div class="insta__inner-flex">
-            <img src="img/Instagram_icon.png" alt="" class="insta__inner-flex--icon">
-            <p class="insta__inner-flex--title insta__inner-flex--title-position">sample</p>
-          </div>
-
-          <div class="insta__flex-item--text">
-            <p class="insta__flex-item--text-inner">
-              サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-            </p>
-            <p class="insta__flex-item--text-date insta__flex-item--text-date-position">
-              20XX/XX/XX
-            </p>  
-          </div>
-        </li>
-
-        <!-- insta-item_06 -->
-        <li class="insta__flex-item insta__flex-item-position insta__flex-item--border">
-          <img src="img/Instagram_sample.jpg" alt="" class="insta__flex-item--sample">
-
-          <div class="insta__inner-flex">
-            <img src="img/Instagram_icon.png" alt="" class="insta__inner-flex--icon">
-            <p class="insta__inner-flex--title insta__inner-flex--title-position">sample</p>
-          </div>
-
-          <div class="insta__flex-item--text">
-            <p class="insta__flex-item--text-inner">
-              サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-            </p>
-            <p class="insta__flex-item--text-date insta__flex-item--text-date-position">
-              20XX/XX/XX
-            </p>  
-          </div>
-        </li>
-      </ul>
-    </section><!-- /#instagram.insta -->
-
-    <!-- キャンペーン-01 -->
-    <section id="campaign-01" class="cv">
-      <img src="img/ribbon.png" alt="" class="cv__title">
-
-      <div class="cv__flex">
-        <div class="cv__flex-left">
-          <img src="img/sample_cv.png" alt="" class="cv__flex-left--img cv__flex-left--fadein animate__animated">
-          <p class="cv__flex-left--text cv__flex-left--text-position">
-            容量：200g(約1ヶ月分)
-          </p>
+            <!-- スライド-03 -->
+            <li>
+              <img src="data1/images/slide03.jpg" alt="slide03" title="slide03" id="wows1_2"/>
+            </li>
+          </ul>
         </div>
 
-        <div class="cv__flex-right">
-          <div class="cv__flex-right--title-box border">
-            <h2 class="cv__flex-right--title cv__flex-right--title-position">
-              プレミアムbioシャンプー
-            </h2>
-            <p class="cv__flex-right--sub-title cv__flex-right--sub-title-position">
-              (オーガニックシャンプー)
-            </p>
-          </div>
+        <!--<div class="ws_script" style="position:absolute;left:-99%">
+          <a href="http://wowslider.net">slider html</a> by WOWSlider.com v9.0</div>
+        <div class="ws_shadow"></div>-->
+        </div>	
+        <script type="text/javascript" src="engine1/wowslider.js"></script>
+        <script type="text/javascript" src="engine1/script.js"></script>
+        <!-- End WOWSlider.com BODY section -->
+      
 
-          <div class="cv__flex-right--inline-box">
-            <div class="cv__flex-right--inline-box-left">
-              <p class="cv__flex-right--inline-text">通常：5,478円(税込)</p>
-              <p class="cv__flex-right--inline-regular cv__flex-right--inline-regular-position">→定期コース初回</p>
-            </div>
-            
-            <div class="cv__flex-right--inline-box-right">
-              <p class="cv__flex-right--inline-price">1,980<span class="cv__flex-right--inline-yen">円</span></p>
-              <p class="cv__flex-right--inline-tax cv__flex-right--inline-tax-position">(税込)</p>
-            </div>
-          </div>
-
-          <a href="#form" class="cv__flex-right--button cv__flex-right--button-text">今すぐ試す▼</a>
-
-          <div class="cv__flex-right--cancel-box">
-            <p class="cv__flex-right--cancel-text cv__flex-right--cancel-text-position maker">途中解約可能</p>
-            <p class="cv__flex-right--cancel-minimum cv__flex-right--cancel-minimum-position">最低購入回数の縛りはありません</p>
-          </div>
-        </div>
+      <!-- カバータイトル -->
+      <div class="cover-title">
+        <h1>魂</h1>
+        <p>
+          <span class="vertical-rl">職人の魂と</span>
+          <span class="vertical-rl">ニッポン人の心</span>
+        </p>
       </div>
-    </section><!-- /#campaign-01.cv -->
 
-    <!-- 自分の髪に満足していますか？ -->
-    <section id="empathy" class="check">
-      <div class="check__wrapper">
-        <h2 class="check__title">
-          <span class="check__title--position maker">自分の髪に満足していますか？</span>
+      <!-- スクロールボタン -->
+      <div class="scroll-button blinking">
+        <p class="uppercase poppins">scroll</p>
+        <i class="bi bi-arrow-down-short"></i>
+      </div>
+    </div><!-- /.cover -->
+
+    <!-- コンテンツ -->
+    <section class="activity">
+      <div class="container">
+        <h2>
+          <span class="activity-title">魂</span>
+          <span class="section-title">伝統を受け継ぐ</span>
         </h2>
+  
+        <!-- コンテンツ 01 -->
+        <article class="activity-content">
+          <div class="activity-content-circle">
+            <h3 class="activity-content-title">
+              <span class="activity-content-title-first">伝統</span>
+              <span class="activity-content-title-second">の</span>
+              <span class="activity-content-title-third vertical-rl">継承</span>
+            </h3>
+          </div>
 
-        <ul class="check__list">
-          <li class="check__list-flex">
-            <img src="img/check.png" alt="" class="check__list-flex--img">
-            <p class="check__list-flex--text check__list-flex--text-position">白髪染めを行ったが艶が出ない
-          </li>
+          <div class="activity-content-item">
+            <div class="activity-content-item-image">
+              <div class="activity-content-item-back fadeIn-Up">
+                <img src="./img/senkou01.jpg" alt="線香花火" width="1920" height="1280">
+              </div>
+              <div class="activity-content-item-front fadeIn-Up">
+                <img src="./img/syakudama.jpg" alt="尺玉" width="1920" height="1440">
+              </div>
+            </div>
 
-          <li class="check__list-flex">
-            <img src="img/check.png" alt="" class="check__list-flex--img">
-            <p class="check__list-flex--text check__list-flex--text-position">髪にハリ・コシがない</p>
-          </li>
+            <p class="activity-content-item-text noto-sans-jp">
+              テキストテキストテキストテキストテキストテキストテキストテキスト<br
+              >テキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </article><!-- /.activity-content -->
 
-          <li class="check__list-flex">
-            <img src="img/check.png" alt="" class="check__list-flex--img">
-            <p class="check__list-flex--text check__list-flex--text-position">頭皮のニオイが最近気になってきた</p>
-          </li>
+        <!-- コンテンツ 02 -->
+        <article class="activity-content activity-content-bottom">
+          <div class="activity-content-circle">
+            <h3 class="activity-content-title">
+              <span class="activity-content-title-first">伝統</span>
+              <span class="activity-content-title-second">の</span>
+              <span class="activity-content-title-third vertical-rl">継承</span>
+            </h3>
+          </div>
 
-          <li class="check__list-flex">
-            <img src="img/check.png" alt="" class="check__list-flex--img">
-            <p class="check__list-flex--text check__list-flex--text-position">髪の衰えを感じる</p>
-          </li>
+          <div class="activity-content-item activity-content-item-bottom">
+            <div class="activity-content-item-image activity-content-item-image-bottom">
+              <div class="activity-content-item-back activity-content-item-back-bottom fadeIn-Up">
+                <img src="./img/slide03.jpg" alt="線香花火" width="1920" height="1280">
+              </div>
+              <div class="activity-content-item-front activity-content-item-front-bottom fadeIn-Up">
+                <img src="./img/senkou02.jpg" alt="尺玉" width="1920" height="1280">
+              </div>
+            </div>
 
+            <p class="activity-content-item-text activity-content-item-text-bottom noto-sans-jp">
+              テキストテキストテキストテキストテキストテキストテキストテキスト<br
+              >テキストテキストテキストテキストテキストテキストテキストテキスト<br
+              >テキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </article><!-- /.activity-content -->
+      </div>
+    </section><!-- /.activity -->
+
+    <!-- お知らせ -->
+    <section class="info">
+      <div class="container">
+
+        <h2 class="section-title">お知らせ</h2>
+
+        <ul class="info-list noto-sans-jp">
           <li>
-            <p class="check__list-flex--text">など・・・</p>
+            <a href="#" class="info-list-link">
+              <dl class="info-list-inner">
+                <dt>2023年01月01日</dt>
+                <dd>テキストテキストテキスト</dd>
+              </dl>
+              <div class="circle-button info-list-button"></div>
+            </a>
           </li>
+          <li>
+            <a href="#" class="info-list-link">
+              <dl class="info-list-inner">
+                <dt>2023年01月01日</dt>
+                <dd>テキストテキストテキスト</dd>
+              </dl>
+              <div class="circle-button info-list-button"></div>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#" class="info-list-link">
+            <dl class="info-list-inner">
+                <dt>2023年01月01日</dt>
+                <dd>テキストテキストテキストテキストテキストテキスト</dd>
+              </dl>
+              <div class="circle-button info-list-button"></div>
+            </a>
+          </li>
+          
         </ul>
       </div>
-    </section><!-- /#empathy.check -->
-
-    <!-- これらの原因はシャンプーにありました -->
-    <section id="exhibit" class="cause">
-      <div class="cause__top">
-        <h2 class="cause__top-title">
-          <span class="cause__top-title--position maker">これらの原因はシャンプーにありました</span>
-        </h2>
-
-        <div class="cause__top-flex">
-          <img src="img/exhibit-sample1.jpg" alt="" class="cause__top-flex--img animate__animated">
-          
-          <ul class="cause__top-flex--text">
-            <li>年齢を重ねると地肌が乾燥しがち。</li>
-            <li class="cause__top-flex--text-position">女性らしさの源となる成分は40代から急激に減少し、老け髪に。</li>
-            <li class="cause__top-flex--text-position">さらに、従来のシャンプーは洗浄力が強く、必要な脂分まで洗い流してしまうことも。</li>
-          </ul>
-        </div>  
-        
-        <div class="cause__arrow">
-          <img src="img/Arrow.png" alt="" class="cause__arrow--img">
-        </div>
-
-      </div><!-- /.cause__top -->
-
-      <div class="cause__bottom">
-        <h2 class="cause__bottom-title">
-          <span class="cause__bottom-title--position maker">年齢に合わせたシャンプーが必要</span>
-        </h2>
-
-        <div class="cause__bottom-flex">
-          <img src="img/exhibit-sample2.jpg" alt="" class="cause__bottom-flex--img animate__animated">
-          
-          <ul class="cause__bottom-flex--text">
-            <li>プレミアムbioシャンプーは年齢髪のために100%天然成分。地肌に潤いを与え、髪本来の輝きを引き出します。</li>
-            <li class="cause__bottom-flex--text-letter cause__bottom-flex--text-position">厳選された黒髪成分配合で髪も肌もやさしく洗浄。「若見え髪」へと導きます。</li>
-          </ul>
-        </div>  
-      </div><!-- /.cause__bottom -->  
-    </section><!-- /#exhibit.cause -->
-
-    <!-- キャンペーン-02 -->
-    <section id="campaign-02" class="cv">
-      <img src="img/ribbon.png" alt="" class="cv__title">
-
-      <div class="cv__flex">
-        <div class="cv__flex-left">
-          <img src="img/sample_cv.png" alt="" class="cv__flex-left--img cv__flex-left--fadein animate__animated">
-          <p class="cv__flex-left--text cv__flex-left--text-position">
-            容量：200g(約1ヶ月分)
-          </p>
-        </div>
-
-        <div class="cv__flex-right">
-          <div class="cv__flex-right--title-box border">
-            <h2 class="cv__flex-right--title cv__flex-right--title-position">
-              プレミアムbioシャンプー
-            </h2>
-            <p class="cv__flex-right--sub-title cv__flex-right--sub-title-position">
-              (オーガニックシャンプー)
-            </p>
-          </div>
-
-          <div class="cv__flex-right--inline-box">
-            <div class="cv__flex-right--inline-box-left">
-              <p class="cv__flex-right--inline-text">通常：5,478円(税込)</p>
-              <p class="cv__flex-right--inline-regular cv__flex-right--inline-regular-position">→定期コース初回</p>
-            </div>
-            
-            <div class="cv__flex-right--inline-box-right">
-              <p class="cv__flex-right--inline-price">1,980<span class="cv__flex-right--inline-yen">円</span></p>
-              <p class="cv__flex-right--inline-tax cv__flex-right--inline-tax-position">(税込)</p>
-            </div>
-          </div>
-
-          <a href="#form" class="cv__flex-right--button cv__flex-right--button-text">今すぐ試す▼</a>
-
-          <div class="cv__flex-right--cancel-box">
-            <p class="cv__flex-right--cancel-text cv__flex-right--cancel-text-position maker">途中解約可能</p>
-            <p class="cv__flex-right--cancel-minimum cv__flex-right--cancel-minimum-position">最低購入回数の縛りはありません</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /#Campaign-02.cv -->
-
-    <!-- プレミアムbioシャンプーのこだわりポイント -->
-    <section id="benefit" class="point">
-      <h2 class="point__title point__title--position">
-        プレミアムbioシャンプーの<br>こだわりポイント
-      </h2>
-
-      <!-- point-01 -->
-      <div class="point__flex point__flex-01--position">
-        <div class="point__flex-title-box">
-
-          <div class="point__flex-title-box--border border">
-            <h3 class="point__flex-title-box--title point__flex-title-box--title-letter">
-              <span class="point__flex-title-box--title-position maker">100％天然成分</span>
-            </h3>
-          </div>
-
-          <ul class="point__flex-title-box--inner point__flex-title-box--inner-position">
-            <li class="point__flex-title-box--inner-content">100％天然の洗浄成分だからお子様でもご使用いただけます。</li>
-            <li class="point__flex-title-box--inner-content">厳選された黒髪成分配合で髪も肌もやさしく洗浄。「若見え髪」へと導きます。</li>
-          </ul>
-        </div>
-
-        <div class="point__flex-img-box">
-          <img src="img/benefit_point1.jpg" alt="" class="point__flex-img point__flex-img-box--img-01 animate__animated">
-          <p class="point__flex-img-box--text point__flex-img-box--text-position">
-            汚れはしっかり落ちるのに潤う
-          </p>
-        </div>
-      </div>
-
-      <!-- point-02 -->
-      <div class="point__flex-re point__flex-02--position">
-        <div class="point__flex-re-title-box">
-
-          <div class="point__flex-re-title-box--border border">
-            <h3 class="point__flex-re-title-box--title">
-              <span class="point__flex-re-title-box--title-position maker">黒髪成分配合</span>
-            </h3>
-          </div>
-
-          <ul class="point__flex-re-title-box--inner point__flex-re-title-box--inner-position">
-            <li class="point__flex-re-title-box--inner-content">黒髪のもととなるメラニン色素を活性化する成分を配合。</li>
-            <li class="point__flex-re-title-box--inner-content">白髪の芯部に働きかけ、髪本来の自然な髪色に仕上げます。</li>
-          </ul>
-        </div>
-
-        <div class="point__flex-re-img-box">
-          <img src="img/benefit_point2.jpg" alt="" class="point__flex-re-img point__flex-re-img-box--img-02 animate__animated">
-          <p class="point__flex-re-img-box--text point__flex-re-img-box--text-position">
-            ダメージ・老化部分を内部から補修
-          </p>
-        </div>
-      </div>
-
-      <!-- point-03 -->
-      <div class="point__flex point__flex-03--position">
-        <div class="point__flex-title-box">
-
-          <div class="point__flex-title-box--border border">
-            <h3 class="point__flex-title-box--title">
-              <span class="point__flex-title-box--title-position maker">注目の補修成分配合</span>
-            </h3>
-          </div>
-
-          <ul class="point__flex-title-box--inner point__flex-title-box--inner-position">
-            <li class="point__flex-title-box--inner-content">傷んだ髪を内部から補修する、今注目の植物成分を配合。</li>
-            <li class="point__flex-title-box--inner-content">世界的に品質が認められています。</li>
-          </ul>
-        </div>
-
-        <div class="point__flex-img-box">
-          <img src="img/benefit_point3.jpg" alt="" class="point__flex-img point__flex-img-box--img-03 animate__animated">
-          <p class="point__flex-img-box--text point__flex-img-box--text-position">
-            注目の植物成分を配合
-          </p>
-        </div>
-      </div>
-
-      <!-- point-04 -->
-      <div class="point__flex-re point__flex-04--position">
-        <div class="point__flex-re-title-box">
-
-          <div class="point__flex-re-title-box--border border">
-            <h3 class="point__flex-re-title-box--title">
-              <span class="point__flex-re-title-box--title-position maker">保湿成分をたっぷり配合</span>
-            </h3>
-          </div>
-
-          <ul class="point__flex-re-title-box--inner point__flex-re-title-box--inner-position">
-            <li class="point__flex-re-title-box--inner-content">保湿成分のコラーゲンとヒアルロン酸をたっぷり配合。</li>
-            <li class="point__flex-re-title-box--inner-content">傷みが気になる髪に潤いを与え、内部まで濃密ケア。</li>
-          </ul>
-        </div>
-
-        <div class="point__flex-re-img-box">
-          <img src="img/benefit_point4.jpg" alt="" class="point__flex-re-img point__flex-re-img-box--img-04 animate__animated">
-          <p class="point__flex-re-img-box--text point__flex-re-img-box--text-04 point__flex-re-img-box--text-position">
-            コラーゲンとヒアルロン酸で<br class="point__flex-re-img-box--br">髪の乾燥を防ぐ
-          </p>
-        </div>
-      </div>
-
-    </section><!-- /#benefit.point -->
-
-    <!-- キャンペーン-03 -->
-    <section id="campaign-03" class="cv">
-      <img src="img/ribbon.png" alt="" class="cv__title">
-
-      <div class="cv__flex">
-        <div class="cv__flex-left">
-          <img src="img/sample_cv.png" alt="" class="cv__flex-left--img cv__flex-left--fadein animate__animated">
-          <p class="cv__flex-left--text cv__flex-left--text-position">
-            容量：200g(約1ヶ月分)
-          </p>
-        </div>
-
-        <div class="cv__flex-right">
-          <div class="cv__flex-right--title-box border">
-            <h2 class="cv__flex-right--title cv__flex-right--title-position">
-              プレミアムbioシャンプー
-            </h2>
-            <p class="cv__flex-right--sub-title cv__flex-right--sub-title-position">
-              (オーガニックシャンプー)
-            </p>
-          </div>
-
-          <div class="cv__flex-right--inline-box">
-            <div class="cv__flex-right--inline-box-left">
-              <p class="cv__flex-right--inline-text">通常：5,478円(税込)</p>
-              <p class="cv__flex-right--inline-regular cv__flex-right--inline-regular-position">→定期コース初回</p>
-            </div>
-            
-            <div class="cv__flex-right--inline-box-right">
-              <p class="cv__flex-right--inline-price">1,980<span class="cv__flex-right--inline-yen">円</span></p>
-              <p class="cv__flex-right--inline-tax cv__flex-right--inline-tax-position">(税込)</p>
-            </div>
-          </div>
-
-          <a href="#form" class="cv__flex-right--button cv__flex-right--button-text">今すぐ試す▼</a>
-
-          <div class="cv__flex-right--cancel-box">
-            <p class="cv__flex-right--cancel-text cv__flex-right--cancel-text-position maker">途中解約可能</p>
-            <p class="cv__flex-right--cancel-minimum cv__flex-right--cancel-minimum-position">最低購入回数の縛りはありません</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /#Campaign-03.cv -->
-
-    <!-- プレミアムbioシャンプーの使い方 -->
-    <section id="step" class="use">
-      <h2 class="use__title">
-        <span class="use__title-position">プレミアムbioシャンプーの使い方</span>
-      </h2>
-
-      <!-- step-01 -->
-      <div class="use__flex use__step-01 use__border">
-
-        <img src="img/use_step1.jpg" alt="" class="use__flex--img">
-
-        <div class="use__flex-text use__flex-text--border-left">
-          <h3 class="use__flex-text--title use__flex-text--title-position">
-            STEP1
-          </h3>
-
-          <p class="use__flex-text--inner">濡らす前にブラッシングを行い、髪の毛のほつれや付着したホコリを取る</p>
-        </div>
-      </div>
-
-      <!-- step-02 -->
-      <div class="use__flex use__step-02 use__border">
-
-        <img src="img/use_step2.jpg" alt="" class="use__flex--img">
-
-        <div class="use__flex-text use__flex-text--border-left">
-          <h3 class="use__flex-text--title use__flex-text--title-position">
-            STEP2
-          </h3>
-
-          <p class="use__flex-text--inner">ぬるめのお湯で頭皮から毛先までしっかり濡らす</p>
-        </div>
-      </div>
-
-      <!-- step-03 -->
-      <div class="use__flex use__step-03 use__border">
-
-        <img src="img/use_step3.jpg" alt="" class="use__flex--img">
-
-        <div class="use__flex-text use__flex-text--border-left">
-          <h3 class="use__flex-text--title use__flex-text--title-position">
-            STEP3
-          </h3>
-
-          <p class="use__flex-text--inner">シャンプーを泡立て髪全体の表面の汚れを落とすように優しく洗う</p>
-        </div>
-      </div>
-
-      <!-- step-04 -->
-      <div class="use__flex use__step-04 use__border">
-
-        <img src="img/use_step4.jpg" alt="" class="use__flex--img">
-
-        <div class="use__flex-text use__flex-text--border-left">
-          <h3 class="use__flex-text--title use__flex-text--title-position">
-            STEP4
-          </h3>
-
-          <p class="use__flex-text--inner">一度すすぎ、もう一度シャンプーを泡立て今度は頭皮をマッサージしながら洗う</p>
-        </div>
-      </div>
-
-      <!-- step-05 -->
-      <div class="use__flex use__step-05">
-
-        <img src="img/use_step5.jpg" alt="" class="use__flex--img">
-
-        <div class="use__flex-text use__flex-text--border-left">
-          <h3 class="use__flex-text--title use__flex-text--title-position">
-            STEP5
-          </h3>
-
-          <p class="use__flex-text--inner">しっかりと流す</p>
-        </div>
-      </div>
-    </section><!-- /#step.use -->
-
-    <!-- お客様からのよくあるご質問 -->
-    <section id="question" class="qa">
-      <h2 class="qa__title qa__title--position">
-        お客様からのよくあるご質問
-      </h2>
-
-      <!-- Q & A-01 -->
-      <div class="qa__box qa__box--border qa__box--01">
-        <div class="qa__box-q-flex">
-          <h3 class="qa__box-q-flex--title qa__box-q-flex--title-position">
-            Q.
-          </h3>
-          <p class="qa__box-q-flex--text qa__box-q-flex--text-position">
-            どんな人にオススメですか？
-          </p>
-        </div>
-
-        <div class="qa__box-a-flex">
-          <h3 class="qa__box-a-flex--title qa__box-a-flex--title-position">
-            A.
-          </h3>
-          <ul class="qa__box-a-flex--text">
-            <li class="qa__box-a-flex--text-position">髪にツヤや潤いがない、頭皮が乾燥している、妊娠中に白髪が目立つ等の悩みを抱えた女性にオススメです。</li>
-            <li class="qa__box-a-flex--text-position">もちろん、男性やお子様にもご使用いただけます。</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Q & A-02 -->
-      <div class="qa__box qa__box--border qa__box--02">
-        <div class="qa__box-q-flex">
-          <h3 class="qa__box-q-flex--title qa__box-q-flex--title-position">
-            Q.
-          </h3>
-          <p class="qa__box-q-flex--text qa__box-q-flex--text-position">
-            どのくらいで実感できるの？
-          </p>
-        </div>
-
-        <div class="qa__box-a-flex">
-          <h3 class="qa__box-a-flex--title qa__box-a-flex--title-position">
-            A.
-          </h3>
-          <ul class="qa__box-a-flex--text">
-            <li class="qa__box-a-flex--text-position">すぐに実感できる方もいれば、時間をかけてご実感された方もいらっしゃいます。</li>
-            <li class="qa__box-a-flex--text-position">特に、3ヶ月ほど続けたお客様から満足のお声を多くいただいております。</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Q & A-03 -->
-      <div class="qa__box qa__box--border qa__box--03">
-        <div class="qa__box-q-flex">
-          <h3 class="qa__box-q-flex--title qa__box-q-flex--title-position">
-            Q.
-          </h3>
-          <p class="qa__box-q-flex--text qa__box-q-flex--text-position">
-            使用量の目安は？
-          </p>
-        </div>
-
-        <div class="qa__box-a-flex">
-          <h3 class="qa__box-a-flex--title qa__box-a-flex--title-position">
-            A.
-          </h3>
-          <ul class="qa__box-a-flex--text">
-            <li class="qa__box-a-flex--text-position">3プッシュを目安に、髪の長さに合わせてご使用ください。</li>
-            <li class="qa__box-a-flex--text-position">少なすぎると、効果が感じられない可能性もございます。目安量をたっぷりとお使いください。</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Q & A-04 -->
-      <div class="qa__box qa__box--border qa__box--04">
-        <div class="qa__box-q-flex">
-          <h3 class="qa__box-q-flex--title qa__box-q-flex--title-position">
-            Q.
-          </h3>
-          <p class="qa__box-q-flex--text qa__box-q-flex--text-position">
-            本当にコンディショナーやトリートメントはいらないの？
-          </p>
-        </div>
-
-        <div class="qa__box-a-flex qa__box-a-flex--04-sp">
-          <h3 class="qa__box-a-flex--title qa__box-a-flex--title-position">
-            A.
-          </h3>
-          <ul class="qa__box-a-flex--text">
-            <li class="qa__box-a-flex--text-position">洗うのと同時に髪を潤してくれるので通常は必要ありません。</li>
-            <li class="qa__box-a-flex--text-position">どうしても気になる方は合わせてトリートメントをご使用ください。</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Q & A-05 -->
-      <div class="qa__box qa__box--border qa__box--05">
-        <div class="qa__box-q-flex">
-          <h3 class="qa__box-q-flex--title qa__box-q-flex--title-position">
-            Q.
-          </h3>
-          <p class="qa__box-q-flex--text qa__box-q-flex--text-position">
-            ヘアカラーをしていても問題ないですか？
-          </p>
-        </div>
-
-        <div class="qa__box-a-flex">
-          <h3 class="qa__box-a-flex--title qa__box-a-flex--title-position">
-            A.
-          </h3>
-          <ul class="qa__box-a-flex--text">
-            <li class="qa__box-a-flex--text-position">全ての髪色の方がご使用いただけます。</li>
-            <li class="qa__box-a-flex--text-position">自然で美しい黒髪へと導く効果もありますが、カラーリングが落ちるのを防ぐ効果もあります。</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Q & A-06 -->
-      <div class="qa__box qa__box--06">
-        <div class="qa__box-q-flex">
-          <h3 class="qa__box-q-flex--title qa__box-q-flex--title-position">
-            Q.
-          </h3>
-          <p class="qa__box-q-flex--text qa__box-q-flex--text-position">
-            妊娠・授乳中でも使えますか？
-          </p>
-        </div>
-
-        <div class="qa__box-a-flex">
-          <h3 class="qa__box-a-flex--title qa__box-a-flex--title-position">
-            A.
-          </h3>
-          <ul class="qa__box-a-flex--text">
-            <li class="qa__box-a-flex--text-position">特に問題はございません。</li>
-            <li class="qa__box-a-flex--text-position">万が一、香りで気分が悪くなった際はご使用をおやめください。</li>
-          </ul>
-        </div>
-      </div>
-    </section><!-- /#question.qa -->
-
-    <!-- キャンペーン-04 -->
-    <section id="campaign-04" class="cv">
-      <img src="img/ribbon.png" alt="" class="cv__title">
-
-      <div class="cv__flex">
-        <div class="cv__flex-left">
-          <img src="img/sample_cv.png" alt="" class="cv__flex-left--img cv__flex-left--fadein animate__animated">
-          <p class="cv__flex-left--text cv__flex-left--text-position">
-            容量：200g(約1ヶ月分)
-          </p>
-        </div>
-
-        <div class="cv__flex-right">
-          <div class="cv__flex-right--title-box border">
-            <h2 class="cv__flex-right--title cv__flex-right--title-position">
-              プレミアムbioシャンプー
-            </h2>
-            <p class="cv__flex-right--sub-title cv__flex-right--sub-title-position">
-              (オーガニックシャンプー)
-            </p>
-          </div>
-
-          <div class="cv__flex-right--inline-box">
-            <div class="cv__flex-right--inline-box-left">
-              <p class="cv__flex-right--inline-text">通常：5,478円(税込)</p>
-              <p class="cv__flex-right--inline-regular cv__flex-right--inline-regular-position">→定期コース初回</p>
-            </div>
-            
-            <div class="cv__flex-right--inline-box-right">
-              <p class="cv__flex-right--inline-price">1,980<span class="cv__flex-right--inline-yen">円</span></p>
-              <p class="cv__flex-right--inline-tax cv__flex-right--inline-tax-position">(税込)</p>
-            </div>
-          </div>
-
-          <a href="#form" class="cv__flex-right--button cv__flex-right--button-text">今すぐ試す▼</a>
-
-          <div class="cv__flex-right--cancel-box">
-            <p class="cv__flex-right--cancel-text cv__flex-right--cancel-text-position maker">途中解約可能</p>
-            <p class="cv__flex-right--cancel-minimum cv__flex-right--cancel-minimum-position">最低購入回数の縛りはありません</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /#Campaign-04.cv -->
-
-    <!-- 問い合わせフォーム --> 
-    <section id="form" class="inquiry">
-        <h2 class="inquiry__title inquiry__title--font">
-          <span class="inquiry__title--position">お客様情報のご入力</span>
-        </h2>
-            
-          <form method="POST" action="#" id="contact_form">
-            <div class="inquiry__box">
-
-            <!-- inquiry__box-item-01 -->
-              <div class="inquiry__box--item-01">
-              <!-- お名前 -->
-                <div class="inquiry__box--name">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        お名前
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="text" name="name" id="name" class="inquiry__box-input" placeholder="山田花子">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_name"></p>
+    </section><!-- /.info -->
+
+    <!-- お問い合わせ -->
+    <section class="contact">
+      <div class="container">
+
+        <h2 class="section-title">お問い合わせ</h2>
+        <p class="contact-sub-title">ご質問等ございましたら、<br>お気軽にお問い合わせください</p>
+
+        <div class="contact-nav">
+          <ul class="contact-list">
+            <!-- お電話での問い合わせ -->
+            <li>
+              <a href="tel:0000000000" class="contact-list-tel">
+                <div class="contact-list-circle">
+                  <i class="fas fa-phone-alt contact-list-icon"></i>
                 </div>
-
-              <!-- フリガナ -->
-                <div class="inquiry__box--kana inquiry__box--position">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        フリガナ
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="text" name="kana" id="kana" class="inquiry__box-input" placeholder="ヤマダハナコ">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_kana"></p>
+    
+                <div class="contact-list-inner noto-serif-jp">
+                  <p class="contact-list-inner-head">お電話でのお問い合わせ</p>
+                  <p class="contact-list-inner-number">00-0000-0000</p>
+                  <p class="contact-list-inner-bottom">月～金09:00～19:00(祝日を除く)</p>
                 </div>
-              </div>
-
-            <!-- inquiry__box-item-02 -->
-              <div class="inquiry__box--item-02">
-              <!-- 郵便番号 -->
-              <div class="inquiry__box--post">
-                <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                  <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                    <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                      郵便番号
-                    </li>
-                    <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                      必須
-                    </li>
-                  </ul>
-
-                  <div class="inquiry__box-input--position">
-                    <input type="text" name="post" id="post" class="inquiry__box-input" placeholder="1500031">
-                  </div>
+              </a>
+            </li>
+  
+            <!-- ＦＡＸでの問い合わせ -->
+            <li>
+              <a href="tel:0000000000" class="contact-list-fax">
+                <div class="contact-list-circle">
+                  <i class="fas fa-fax contact-list-icon"></i>
                 </div>
-                <p class="error_text" id="error_post"></p>
-              </div>
-
-              <!-- 都道府県 -->  
-                <div class="inquiry__box--prefectures inquiry__box--position">
-                  <div class="inquiry__box-flex">
-                    <ul class="inquiry__box-inner-flex">
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        都道府県
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-                    <div class="inquiry__box-input--position">
-                      <select size="1" name="prefecture" id="prefecture" class="inquiry__box-input">
-                        <option value="" selected>選択してください</option>
-                        <option value="1">北海道</option>
-                        <option value="2">青森県</option>
-                        <option value="3">岩手県</option>
-                        <option value="4">宮城県</option>
-                        <option value="5">秋田県</option>
-                        <option value="6">山形県</option>
-                        <option value="7">福島県</option>
-                        <option value="8">茨城県</option>
-                        <option value="9">栃木県</option>
-                        <option value="10">群馬県</option>
-                        <option value="11">埼玉県</option>
-                        <option value="12">千葉県</option>
-                        <option value="13">東京都</option>
-                        <option value="14">神奈川県</option>
-                        <option value="15">新潟県</option>
-                        <option value="16">富山県</option>
-                        <option value="17">石川県</option>
-                        <option value="18">福井県</option>
-                        <option value="19">山梨県</option>
-                        <option value="20">長野県</option>
-                        <option value="21">岐阜県</option>
-                        <option value="22">静岡県</option>
-                        <option value="23">愛知県</option>
-                        <option value="24">三重県</option>
-                        <option value="25">滋賀県</option>
-                        <option value="26">京都府</option>
-                        <option value="27">大阪府</option>
-                        <option value="28">兵庫県</option>
-                        <option value="29">奈良県</option>
-                        <option value="30">和歌山県</option>
-                        <option value="31">鳥取県</option>
-                        <option value="32">島根県</option>
-                        <option value="33">岡山県</option>
-                        <option value="34">広島県</option>
-                        <option value="35">山口県</option>
-                        <option value="36">徳島県</option>
-                        <option value="37">香川県</option>
-                        <option value="38">愛媛県</option>
-                        <option value="39">高知県</option>
-                        <option value="40">福岡県</option>
-                        <option value="41">佐賀県</option>
-                        <option value="42">長崎県</option>
-                        <option value="43">熊本県</option>
-                        <option value="44">大分県</option>
-                        <option value="45">宮崎県</option>
-                        <option value="46">鹿児島県</option>
-                        <option value="47">沖縄県</option>
-                      </select>
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_prefecture"></p>
+    
+                <div class="contact-list-inner noto-serif-jp">
+                  <p class="contact-list-inner-head">FAXでのお問い合わせ</p>
+                  <p class="contact-list-inner-number">00-0000-0000</p>
                 </div>
-
-              <!-- 市区町村 -->
-                <div class="inquiry__box--municipalities inquiry__box--position">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        市区町村
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="text" name="municipalities" id="municipalities" class="inquiry__box-input inquiry__box-input--long" placeholder="東京市大阪区煌木町１ー４">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_municipalities"></p>
+              </a>
+            </li>
+  
+            <!-- メールでの問い合わせ -->
+            <li>
+              <a href="mailto:00000@main.jp" class="contact-list-mail">
+                <div class="contact-list-circle">
+                  <i class="far fa-envelope contact-list-icon"></i>
                 </div>
-
-              <!-- マンション名 -->
-                <div class="inquiry__box--condominium inquiry__box--position">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        マンション名
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position inquiry__box-inner-flex--any">
-                        任意
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="text" name="condominium" id="condominium" class="inquiry__box-input inquiry__box-input--long" placeholder="トップマンション１０１号">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_condominium"></p>
+    
+                <div class="contact-list-inner noto-serif-jp">
+                  <p class="contact-list-inner-head">メールでのお問い合わせ</p>
+                  <p class="contact-list-inner-mail">
+                    お問い合わせはこちらから
+                    <span class="circle-button contact-list-inner-button"></span>
+                  </p>
+                  <p class="contact-list-inner-bottom">通常1～2営業日以内に回答します</p>
                 </div>
-              </div>
-
-            <!-- inquiry__box-item-03 -->
-              <div class="inquiry__box--item-03">
-              <!-- 電話番号 -->
-                <div class="inquiry__box--tel">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        電話番号
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="text" name="tel" id="tel" class="inquiry__box-input" placeholder="00000000000">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_tel"></p>
-                </div>
-
-              <!-- メールアドレス -->
-                <div class="inquiry__box--mail inquiry__box--position">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        メールアドレス
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="text" name="mail" id="mail" class="inquiry__box-input inquiry__box-input--long" placeholder="hana8787@example.com">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_mail"></p>
-                </div>
-              </div>
-
-            <!-- inquiry__box-item-04 -->
-              <div class="inquiry__box--item-04">    
-              <!-- パスワード -->
-                <div class="inquiry__box--password">
-                  <div class="inquiry__box-flex"><!-- inputbox横並び用のflex -->
-                    <ul class="inquiry__box-inner-flex"><!-- 項目と必須を横並び用のflex -->
-                      <li class="inquiry__box-inner-flex--title inquiry__box-inner-flex--title-position">
-                        パスワード
-                      </li>
-                      <li class="inquiry__box-inner-flex--mandatory inquiry__box-inner-flex--mandatory-position">
-                        必須
-                      </li>
-                    </ul>
-
-                    <div class="inquiry__box-input--position">
-                      <input type="password" name="password" id="password" class="inquiry__box-input" placeholder="4文字以上、英数字含む">
-                    </div>
-                  </div>
-                  <p class="error_text" id="error_password"></p>
-                </div>
-              </div> 
-            </div><!-- /.inquiry__box -->
-
-          <!-- 支払い方法 -->  
-            <div class="inquiry__pay">
-
-              <h2 class="inquiry__title inquiry__title--font">
-                <span class="inquiry__pay-title--position">お支払い方法</span>
-              </h2>
-              
-            <div class="inquiry__pay-box">
-              <!-- クレジットカード -->  
-              <div class="inquiry__pay-box--credit">
-                <p class="inquiry__box-inner-flex--title">
-                  <label for="credit">
-                    <input type="radio" name="payment" value="credit" id="credit" class="inquiry__pay-box--radio-position">
-                    <span class="inquiry__pay-box--text-position">クレジットカード</span>
-                  </label>
-                </p>
-              </div>
-
-              <!-- 銀行振込 -->
-              <div class="inquiry__pay-box--bank">
-                <p class="inquiry__box-inner-flex--title">
-                  <label for="bank">
-                    <input type="radio" name="payment" value="bank" id="bank" class="inquiry__pay-box--radio-position">
-                    <span class="inquiry__pay-box--text-position">銀行振込</span>
-                  </label>
-                </p>
-              </div>
-
-              <!-- 着払い -->
-              <div class="inquiry__pay-box--delivery">
-                <p class="inquiry__box-inner-flex--title">
-                  <label for="delivery">
-                    <input type="radio" name="payment" value="delivery" id="delivery" class="inquiry__pay-box--radio-position">
-                    <span class="inquiry__pay-box--text-position">着払い</span>
-                  </label>
-                </p>
-              </div>
-
-            <!-- 支払い方法エラー表示 -->
-              <P class="error_text peyment_error" id="error_payment"></P>
-            </div>
-          </div><!-- /.inquiry__pay -->
-
-            <!-- 送信するボタン -->
-              <div class="inquiry__submit">
-                <button type="submit" name="submit_button" id="submit_button" class="inquiry__submit--button inquiry__submit--button-position">
-                  <span class="inquiry__submit--button-font">注文する<span class="inquiry__submit--button-triangle">▼</span></span></button>
-              </div>
-          </form> 
-    </section><!-- /#form .inquiry -->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- /.contact -->
   </main>
 
-  <footer id="footer" class="last">
-    <div class="last__flex last__item--font">
-      <ul class=" last__flex--inner">
-        <li class="last__item--text last__item--border-right"><a href="#">会社概要</a></li>
-        <li class="last__item--text last__item--border-right"><a href="#">特定商取引法に基づく表記及び返品交換について</a></li>
-      </ul>
-      <ul class="last__flex--inner-bottom last__flex--inner-bottom-position">
-        <li class="last__item--text last__item--border-right"><a href="#">利用規約</a></li>
-        <li class="last__item--text last__item--border-right"><a href="#">FAQ</a></li>
-        <li class="last__item--text"><a href="#">プライバシーポリシー</a></li>
-      </ul>
-    </div>
-  </footer><!-- /#footer.last -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <ul class="footer-nav-list nav-list-left noto-serif-jp">
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">サンプル工業の歴史</a></li>
+          <li><a href="#">花火ができるまで</a></li>
+          <li><a href="#">ギャラリー</a></li>
+          <li><a href="#">会社概要</a></li>
+        </ul>
 
-  <!--js読み込み-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js"></script>
-  <script src="js/main.js"></script>
+        <ul class="footer-nav-list nav-list-right noto-serif-jp">
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">サイトポリシー</a></li>
+        </ul>
+      </nav>
+
+      <div class="company">
+        <h2 class="company-title">
+          <span class="company-title-top">魂</span>
+          <span class="company-title-bottom">サンプル工業<br>株式会社</span>
+        </h2>
+  
+        <div class="address">
+          <h3 class="address-title">サンプル工業株式会社</h3>
+
+          <ul class="address-list noto-serif-jp">
+            <li>
+              <span>〒000-0000</span>
+              <span>東京都新宿区●●●11-11-11</span>
+            </li>
+            
+            <li>
+              <ul class="address-list-inner">
+                <li class="address-tel">
+                  <a href="tel:0000000000">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>00-0000-0000</span>
+                  </a>
+                </li>
+                
+                <li class="address-fax">
+                  <a href="tel:0000000000">
+                    <i class="fas fa-fax"></i>
+                    <span>00-0000-0000</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <small class="noto-sans-jp">copyright &copy; Naoya Tyama All Right Reserve</small>
+      </div>
+    </div>
+  </footer><!-- /.footer -->
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
